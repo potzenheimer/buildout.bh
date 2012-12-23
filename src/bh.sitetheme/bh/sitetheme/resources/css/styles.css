@@ -6568,8 +6568,8 @@ body > header #navbar .nav > li > a {
 body > header #main-nav .selected > a,
 body > header #main-nav .selected > a:hover,
 body > header #main-nav .selected > a:focus {
-  color: #ffffff;
-  background-color: #111111;
+  color: #695c3e;
+  background: #eeeeee;
 }
 body > header .brand {
   font-family: 'OswaldBook';
