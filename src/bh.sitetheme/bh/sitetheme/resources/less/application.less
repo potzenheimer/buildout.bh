@@ -1,0 +1,200 @@
+// Custom application specific styles
+//--------------------------------------
+
+
+body {
+}
+
+@appOneDarkest:         #0d5d75;
+@appOneDarker:          #008297;
+@appOneDark:            #2891a4;
+@appOne:                #50a0b0;
+@appOneLight:           #70afbc;
+@appOneLighter:         #8bbdc7;
+
+
+@appTwo:                #b8aa88;
+
+@appDark:               #607080;
+@appDarker:             #2A323F;
+
+@appBrown:              #695C3E;
+
+
+.colorDemo {
+  padding: @baseLineHeight;
+  &.app1 {
+    background: @appOne;
+  }
+  &.app2 {
+    background: darken(@appTwo, 30%);
+    //color: @appDarker;
+    color: @white;
+  }
+}
+
+.peaks {
+    margin:@baseLineHeight / 2 @baseLineHeight @baseLineHeight / 2;
+    position: relative;
+    .square(60px);
+    background: rgba(255, 255, 255, 0.15);
+    padding: 7px 5px 3px;
+    border: 2px solid @grayLighter;
+    border-radius: 35px;
+    .peak {
+      width:0px; 
+      height:0px; 
+      border-left:25px solid transparent;
+      border-right:25px solid transparent;
+      border-bottom:25px solid @white;
+      font-size:0px;
+      line-height:0px;
+      display: inline-block;
+      &.small {
+        border-left:20px solid transparent;
+        border-right:20px solid transparent;
+        border-bottom:20px solid @white;
+      }
+      &.secondary {
+        position:absolute;
+        bottom: 42px;
+        left: 55px;
+        margin-left: -30px;
+        margin-bottom: -15px;
+      }
+    }
+}
+
+// faust styles for a custom editbar override of the basic
+// twitter bootstarp navbar to make the edit bar look like a
+// browser toolbar
+body > header {
+    #toolbar + nav,
+    #editbar-wrapper + nav {
+        margin-top: @navbarHeight;
+        .navbar-inner {
+            .border-radius(0px);
+            .container {
+                //width: @gridRowWidth;
+                //.container-fixed();
+            }
+        }
+    }
+    #navbar {
+      height: @navbarHeight * 2;
+      .navbar-inner {
+        #gradient > .vertical(lighten(@appBrown, 5%), @appBrown); 
+      }
+      .brand {
+        padding-top: @baseLineHeight * 1.5;
+        color: @white;
+        font-size: @baseFontSize * 2;
+
+      }
+      .nav > li > a {
+        float: none;
+        padding: ((@navbarHeight - @baseLineHeight)) 15px ((@navbarHeight - @baseLineHeight));
+      }
+    }
+    // Active nav items
+    #main-nav .selected > a,
+    #main-nav .selected > a:hover,
+    #main-nav .selected > a:focus {
+      color: @navbarInverseLinkColorActive;
+      background-color: @navbarInverseLinkBackgroundActive;
+    }
+    .brand {
+      //float:right !important;
+      font-family: 'OswaldBook';
+      font-weight: normal;
+    }
+    margin-bottom: @baseLineHeight;
+}
+
+.icon-x-large {
+    font-size: 60px;
+    line-height: 60px;
+    //color: @linkColor;
+}
+
+.btn {
+      font-size: 20px;
+      padding: @paddingLarge;
+      .border-radius(0px);
+      margin-right: @baseLineHeight;
+      font-family: 'OswaldBook';
+      //border-color: @white;
+}
+
+.well {
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  h4 {
+    font-family: 'OswaldStencilRegular';
+    font-weight: normal;
+  }
+}
+
+#blog-header {
+  h1 {
+    font-family: 'Yanone Kaffesatz', Helvetica;
+    font-weight: bold;
+  }
+}
+
+#blog-link {
+  padding: @baseLineHeight 0;
+}
+
+#blog-view {
+  .page-header h2 {
+    //font-family: 'OswaldBook';
+    font-weight: normal;
+    a {
+      color: @black;
+    }
+  }
+  a.read-more {
+    color: @grayLight;
+  }
+  article {
+    clear: both;
+    border-bottom: 1px solid @grayLighter;
+    .page-header {
+      border: none;
+      margin-bottom: 0px;
+      padding-bottom: 0px;
+    }
+    .lead {
+      font-family: 'OswaldLight';
+      font-weight: normal;
+    }
+    footer {
+      //text-align: right;
+      margin-bottom: @baseLineHeight;
+      .link-more {
+        clear: both;
+        display: block;
+        color: @grayLight;
+      }
+    }
+  }
+}
+
+#content-wrapper {
+  font-family: 'PT Serif', serif;
+  font-size: @baseFontSize + 2;
+  h2, h3 {
+    font-family: 'OswaldBook';
+    font-weight: normal;
+  }
+}
+
+// faust styles for a HMTL5 based site footer
+body > footer {
+    margin-top: @baseLineHeight;
+    padding: @baseLineHeight 0;
+    border-top: 1px solid @grayLighter;
+    font-family: 'PT Serif', serif;
+}
