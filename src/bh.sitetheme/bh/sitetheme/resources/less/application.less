@@ -44,9 +44,6 @@ h6 { font-size: @baseFontSize; } // ~12px
     }
 }
 
-// faust styles for a custom editbar override of the basic
-// twitter bootstarp navbar to make the edit bar look like a
-// browser toolbar
 body > header {
     #navbar {
       height: @navbarHeight * 2;
@@ -82,12 +79,6 @@ body > header {
 #topbar + #site-header,
 #editbar-wrapper + #site-header {
     margin-top: @navbarHeight;
-    .nav-pills > li > a {
-      color: @white;
-      &:hover {
-        color: @appBrown;
-      }
-    }
 }
 
 #site-header {
@@ -100,6 +91,12 @@ body > header {
     a {
       color: @white;
     }
+  }
+  .nav-pills > li > a {
+      color: @white;
+      &:hover {
+        color: @appBrown;
+      }
   }
 }
 

@@ -49,7 +49,7 @@
         <copy attributes="id dir" css:content="body" css:theme="body" />
 
         <!-- CMSUI Editbar replacements -->
-        <drop css:theme="#editbar-wrapper"
+        <drop css:theme="#topbar"
             css:if-content="#anon-personalbar" />
         <!--<replace css:theme-children="#editbar" css:content="#edit-bar" />-->
         <replace css:theme="#editbar-wrapper"
